@@ -1,8 +1,9 @@
+<!-- app/views/books/show.html.erb -->
 <h1><%= @book.title %></h1>
 <p><%= @book.author %></p>
-<%= image_tag @book.cover_image if @book.cover_image.present? %>
+<%= image_tag @book.cover_image if @book.cover_image.attached? %>
 <p>Status: <%= @book.status %></p>
-<p><%= link_to 'Download PDF', @book.pdf if @book.pdf.present? %></p>
+<p><%= link_to 'Download PDF', rails_blob_path(@book.pdf, disposition: "attachment") if @book.pdf.attached? %></p>
 <p><%= @book.review %></p>
 
 <%= link_to 'Editar', edit_book_path(@book) %> |

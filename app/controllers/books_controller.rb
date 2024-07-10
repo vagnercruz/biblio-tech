@@ -6,6 +6,21 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+  def backlog
+    @books = Book.backlog
+    render :index
+  end
+
+  def reading
+    @books = Book.reading
+    render :index
+  end
+
+  def completed
+    @books = Book.completed
+    render :index
+  end
+
   def show
   end
 

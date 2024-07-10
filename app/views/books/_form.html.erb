@@ -1,3 +1,4 @@
+<!-- app/views/books/_form.html.erb -->
 <%= form_with(model: @book, local: true) do |form| %>
   <% if @book.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +23,7 @@
 
   <div class="field">
     <%= form.label :cover_image %>
-    <%= form.text_field :cover_image %>
+    <%= form.file_field :cover_image %>
   </div>
 
   <div class="field">
@@ -32,7 +33,7 @@
 
   <div class="field">
     <%= form.label :pdf %>
-    <%= form.text_field :pdf %>
+    <%= form.file_field :pdf %>
   </div>
 
   <div class="field">

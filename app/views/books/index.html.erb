@@ -1,11 +1,15 @@
+<!-- app/views/books/index.html.erb -->
 <h1>Lista de Livros</h1>
 
 <%= link_to 'Adicionar Livro', new_book_path %>
+<%= link_to 'Backlog', backlog_books_path %>
+<%= link_to 'Reading', reading_books_path %>
+<%= link_to 'Completed', completed_books_path %>
 
 <ul>
   <% @books.each do |book| %>
     <li>
-      <%= image_tag book.cover_image if book.cover_image.present? %>
+      <%= image_tag book.cover_image if book.cover_image.attached? %>
       <%= link_to book.title, book %> - <%= book.author %> - <%= book.status %>
       <%= link_to 'Editar', edit_book_path(book) %> |
       <%= link_to 'Excluir', book, method: :delete, data: { confirm: 'Tem certeza?' } %>
