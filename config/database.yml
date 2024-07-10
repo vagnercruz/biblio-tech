@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: mendino
+  password: asdpoi04
+
+development:
+  <<: *default
+  database: biblioteca_web_development
+
+test:
+  <<: *default
+  database: biblioteca_web_test
+
+production:
+  <<: *default
+  database: biblioteca_web_production
+  username: biblioteca_web
+  password: <%= ENV['BIBLIOTECA_WEB_DATABASE_PASSWORD'] %>
