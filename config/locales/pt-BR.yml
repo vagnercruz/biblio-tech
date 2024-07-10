@@ -1,0 +1,15 @@
+pt-BR:
+  hello: "Olá"
+  books:
+    title: "Título"
+    author: "Autor"
+    cover_image: "Imagem da Capa"
+    status: "Status"
+    pdf: "PDF"
+    review: "Revisão"
+    new_book: "Adicionar Novo Livro"
+    edit_book: "Editar Livro"
+    back_to_books: "Voltar para Livros"
+    backlog: "Backlog"
+    reading: "Lendo"
+    completed: "Concluído"
